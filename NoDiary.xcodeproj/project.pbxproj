@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E94CD9C210605F800ED12FF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E94CD9B210605F800ED12FF /* CloudKit.framework */; };
+		6E94CDA12106071700ED12FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA1BE220FF768A0032CAF3 /* Info.plist */; };
+		6E94CDA521060A8000ED12FF /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94CDA421060A8000ED12FF /* DatabaseConfig.swift */; };
+		6E94CDA721060AE800ED12FF /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94CDA621060AE800ED12FF /* CloudKitManager.swift */; };
+		6E94CDA9210612D300ED12FF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94CDA8210612D300ED12FF /* TextFieldViewController.swift */; };
+		6ECA1BDA20FF76890032CAF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA1BD920FF76890032CAF3 /* AppDelegate.swift */; };
+		6ECA1BDE20FF768A0032CAF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA1BDD20FF768A0032CAF3 /* Assets.xcassets */; };
+		6ECA1BE120FF768A0032CAF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA1BDF20FF768A0032CAF3 /* Main.storyboard */; };
+		6ECA1BEB20FF7E200032CAF3 /* CalendarDayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA1BE920FF7E200032CAF3 /* CalendarDayItem.swift */; };
+		6ECA1BEC20FF7E200032CAF3 /* CalendarDayItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA1BEA20FF7E200032CAF3 /* CalendarDayItem.xib */; };
+		6ECA1BF2210080FD0032CAF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA1BF1210080FD0032CAF3 /* CalendarViewController.swift */; };
+		6ECA1BF4210081C20032CAF3 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA1BF3210081C20032CAF3 /* CalendarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6E94CD9B210605F800ED12FF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		6E94CDA421060A8000ED12FF /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
+		6E94CDA621060AE800ED12FF /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		6E94CDA8210612D300ED12FF /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		6ECA1BD620FF76890032CAF3 /* NoDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ECA1BD920FF76890032CAF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6ECA1BDD20FF768A0032CAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6ECA1BE020FF768A0032CAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6ECA1BE220FF768A0032CAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ECA1BE320FF768A0032CAF3 /* NoDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoDiary.entitlements; sourceTree = "<group>"; };
+		6ECA1BE920FF7E200032CAF3 /* CalendarDayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDayItem.swift; sourceTree = "<group>"; };
+		6ECA1BEA20FF7E200032CAF3 /* CalendarDayItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarDayItem.xib; sourceTree = "<group>"; };
+		6ECA1BF1210080FD0032CAF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		6ECA1BF3210081C20032CAF3 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6ECA1BD320FF76890032CAF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E94CD9C210605F800ED12FF /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E94CD9A210605F800ED12FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E94CD9B210605F800ED12FF /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E94CD9D2106065100ED12FF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BF1210080FD0032CAF3 /* CalendarViewController.swift */,
+				6E94CDA8210612D300ED12FF /* TextFieldViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6E94CD9E2106066F00ED12FF /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BE320FF768A0032CAF3 /* NoDiary.entitlements */,
+				6ECA1BD920FF76890032CAF3 /* AppDelegate.swift */,
+				6ECA1BE220FF768A0032CAF3 /* Info.plist */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
+		6E94CD9F2106069400ED12FF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BDF20FF768A0032CAF3 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6E94CDA0210606A200ED12FF /* UI element */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BE920FF7E200032CAF3 /* CalendarDayItem.swift */,
+				6ECA1BEA20FF7E200032CAF3 /* CalendarDayItem.xib */,
+			);
+			path = "UI element";
+			sourceTree = "<group>";
+		};
+		6E94CDA22106079E00ED12FF /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BF3210081C20032CAF3 /* CalendarController.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		6E94CDA321060A6B00ED12FF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6E94CDA421060A8000ED12FF /* DatabaseConfig.swift */,
+				6E94CDA621060AE800ED12FF /* CloudKitManager.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6ECA1BCD20FF76890032CAF3 = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BD820FF76890032CAF3 /* NoDiary */,
+				6ECA1BD720FF76890032CAF3 /* Products */,
+				6E94CD9A210605F800ED12FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6ECA1BD720FF76890032CAF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BD620FF76890032CAF3 /* NoDiary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6ECA1BD820FF76890032CAF3 /* NoDiary */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA1BDD20FF768A0032CAF3 /* Assets.xcassets */,
+				6E94CDA22106079E00ED12FF /* Object */,
+				6E94CDA0210606A200ED12FF /* UI element */,
+				6E94CD9F2106069400ED12FF /* Storyboard */,
+				6E94CD9E2106066F00ED12FF /* Support files */,
+				6E94CD9D2106065100ED12FF /* ViewController */,
+				6E94CDA321060A6B00ED12FF /* Config */,
+			);
+			path = NoDiary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6ECA1BD520FF76890032CAF3 /* NoDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiary" */;
+			buildPhases = (
+				6ECA1BD220FF76890032CAF3 /* Sources */,
+				6ECA1BD320FF76890032CAF3 /* Frameworks */,
+				6ECA1BD420FF76890032CAF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoDiary;
+			productName = NoDiary;
+			productReference = 6ECA1BD620FF76890032CAF3 /* NoDiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6ECA1BCE20FF76890032CAF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Xie Liwei";
+				TargetAttributes = {
+					6ECA1BD520FF76890032CAF3 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6ECA1BD120FF76890032CAF3 /* Build configuration list for PBXProject "NoDiary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6ECA1BCD20FF76890032CAF3;
+			productRefGroup = 6ECA1BD720FF76890032CAF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6ECA1BD520FF76890032CAF3 /* NoDiary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6ECA1BD420FF76890032CAF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E94CDA12106071700ED12FF /* Info.plist in Resources */,
+				6ECA1BDE20FF768A0032CAF3 /* Assets.xcassets in Resources */,
+				6ECA1BEC20FF7E200032CAF3 /* CalendarDayItem.xib in Resources */,
+				6ECA1BE120FF768A0032CAF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6ECA1BD220FF76890032CAF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E94CDA521060A8000ED12FF /* DatabaseConfig.swift in Sources */,
+				6ECA1BF2210080FD0032CAF3 /* CalendarViewController.swift in Sources */,
+				6E94CDA9210612D300ED12FF /* TextFieldViewController.swift in Sources */,
+				6E94CDA721060AE800ED12FF /* CloudKitManager.swift in Sources */,
+				6ECA1BDA20FF76890032CAF3 /* AppDelegate.swift in Sources */,
+				6ECA1BF4210081C20032CAF3 /* CalendarController.swift in Sources */,
+				6ECA1BEB20FF7E200032CAF3 /* CalendarDayItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6ECA1BDF20FF768A0032CAF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ECA1BE020FF768A0032CAF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6ECA1BE420FF768A0032CAF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6ECA1BE520FF768A0032CAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6ECA1BE720FF768A0032CAF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NoDiary/Support files/NoDiary.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BMM986A3RM;
+				INFOPLIST_FILE = "$(SRCROOT)/NoDiary/Support files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = greenCross.NoDiaryMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		6ECA1BE820FF768A0032CAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NoDiary/Support files/NoDiary.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BMM986A3RM;
+				INFOPLIST_FILE = "$(SRCROOT)/NoDiary/Support files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = greenCross.NoDiaryMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6ECA1BD120FF76890032CAF3 /* Build configuration list for PBXProject "NoDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ECA1BE420FF768A0032CAF3 /* Debug */,
+				6ECA1BE520FF768A0032CAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ECA1BE720FF768A0032CAF3 /* Debug */,
+				6ECA1BE820FF768A0032CAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6ECA1BCE20FF76890032CAF3 /* Project object */;
+}
