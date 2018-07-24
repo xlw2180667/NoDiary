@@ -46,6 +46,8 @@ class CalendarViewController: NSViewController, NSCollectionViewDataSource, NSCo
             if selectedIndexPath == indexPath {
                 calendarItem.setBlackBackground(isSelected: true)
             }
+        } else {
+            
         }
         return calendarItem
     }
@@ -118,6 +120,7 @@ class CalendarViewController: NSViewController, NSCollectionViewDataSource, NSCo
     }
     
     @IBAction func showLastMonth(_ sender: Any) {
+        selectedIndexPath = nil
         controller.decrementMonth()
         updateCalendar()
 

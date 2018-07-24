@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6E94CD9C210605F800ED12FF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E94CD9B210605F800ED12FF /* CloudKit.framework */; };
-		6E94CDA12106071700ED12FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA1BE220FF768A0032CAF3 /* Info.plist */; };
 		6E94CDA521060A8000ED12FF /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94CDA421060A8000ED12FF /* DatabaseConfig.swift */; };
 		6E94CDA721060AE800ED12FF /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94CDA621060AE800ED12FF /* CloudKitManager.swift */; };
 		6E94CDA9210612D300ED12FF /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94CDA8210612D300ED12FF /* TextFieldViewController.swift */; };
@@ -145,9 +144,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6ECA1BD520FF76890032CAF3 /* NoDiary */ = {
+		6ECA1BD520FF76890032CAF3 /* NoDiaryMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiary" */;
+			buildConfigurationList = 6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiaryMac" */;
 			buildPhases = (
 				6ECA1BD220FF76890032CAF3 /* Sources */,
 				6ECA1BD320FF76890032CAF3 /* Frameworks */,
@@ -157,7 +156,7 @@
 			);
 			dependencies = (
 			);
-			name = NoDiary;
+			name = NoDiaryMac;
 			productName = NoDiary;
 			productReference = 6ECA1BD620FF76890032CAF3 /* NoDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -179,13 +178,13 @@
 								enabled = 1;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -207,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6ECA1BD520FF76890032CAF3 /* NoDiary */,
+				6ECA1BD520FF76890032CAF3 /* NoDiaryMac */,
 			);
 		};
 /* End PBXProject section */
@@ -217,7 +216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E94CDA12106071700ED12FF /* Info.plist in Resources */,
 				6ECA1BDE20FF768A0032CAF3 /* Assets.xcassets in Resources */,
 				6ECA1BEC20FF7E200032CAF3 /* CalendarDayItem.xib in Resources */,
 				6ECA1BE120FF768A0032CAF3 /* Main.storyboard in Resources */,
@@ -418,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiary" */ = {
+		6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiaryMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6ECA1BE720FF768A0032CAF3 /* Debug */,

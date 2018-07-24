@@ -862,17 +862,63 @@ IA
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="IZt-5b-EAJ">
+                                <rect key="frame" x="0.0" y="355" width="350" height="45"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jNI-q2-H8W">
+                                        <rect key="frame" x="278" y="7" width="52" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="UrN-vX-WVX"/>
+                                            <constraint firstAttribute="height" constant="30" id="hQX-ef-T7t"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UFg-MZ-erz">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="cellTitle"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="saveDiary:" target="RJn-SJ-UdD" id="mTm-hd-7IN"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-9k-Rp9">
+                                        <rect key="frame" x="20" y="7" width="52" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WLO-oU-Z73"/>
+                                            <constraint firstAttribute="width" constant="52" id="kGw-HT-Jho"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="roundRect" title="Delete" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RS1-rs-cGQ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="cellTitle"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="deleteDiary:" target="RJn-SJ-UdD" id="YYa-0t-23y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2dc-9k-Rp9" firstAttribute="leading" secondItem="IZt-5b-EAJ" secondAttribute="leading" constant="20" id="0CK-26-mJ1"/>
+                                    <constraint firstItem="2dc-9k-Rp9" firstAttribute="centerY" secondItem="IZt-5b-EAJ" secondAttribute="centerY" id="4vD-2y-KKZ"/>
+                                    <constraint firstItem="jNI-q2-H8W" firstAttribute="centerY" secondItem="IZt-5b-EAJ" secondAttribute="centerY" id="Ojj-xu-iD2"/>
+                                    <constraint firstAttribute="trailing" secondItem="jNI-q2-H8W" secondAttribute="trailing" constant="20" id="zCa-UE-yNF"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wXN-4H-GKo" secondAttribute="trailing" id="E5b-XO-2qx"/>
+                            <constraint firstItem="IZt-5b-EAJ" firstAttribute="top" secondItem="LZF-WQ-8g5" secondAttribute="top" id="KNO-7Q-Xll"/>
                             <constraint firstItem="wXN-4H-GKo" firstAttribute="leading" secondItem="LZF-WQ-8g5" secondAttribute="leading" id="Ud7-SW-DPH"/>
+                            <constraint firstItem="wXN-4H-GKo" firstAttribute="top" secondItem="IZt-5b-EAJ" secondAttribute="bottom" id="V21-X5-PSK"/>
+                            <constraint firstAttribute="trailing" secondItem="IZt-5b-EAJ" secondAttribute="trailing" id="bd0-Nf-ALC"/>
+                            <constraint firstItem="IZt-5b-EAJ" firstAttribute="leading" secondItem="LZF-WQ-8g5" secondAttribute="leading" id="ePX-Ae-Tsf"/>
                             <constraint firstItem="wXN-4H-GKo" firstAttribute="top" secondItem="LZF-WQ-8g5" secondAttribute="top" constant="45" id="iX2-zk-TzE"/>
                             <constraint firstAttribute="bottom" secondItem="wXN-4H-GKo" secondAttribute="bottom" id="lZ0-tX-JAG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DeleteDiaryButton" destination="2dc-9k-Rp9" id="SYz-7w-lh7"/>
+                        <outlet property="saveDiaryButton" destination="jNI-q2-H8W" id="2hd-tq-Hnl"/>
                         <outlet property="textView" destination="JxG-Z1-IgV" id="8G8-Wg-tM7"/>
                         <outlet property="textViewScrollView" destination="wXN-4H-GKo" id="AdJ-iK-ta2"/>
+                        <outlet property="topView" destination="IZt-5b-EAJ" id="ao7-rB-MQc"/>
                     </connections>
                 </viewController>
                 <customObject id="c63-Nu-Bbh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
