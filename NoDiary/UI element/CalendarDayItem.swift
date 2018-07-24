@@ -1,9 +1,9 @@
 //
-//  CalendarDayItem.swift
-//  CornerCal
+//  AppDelegate.swift
+//  NoDiary
 //
-//  Created by Emil Kreutzman on 24/09/2017.
-//  Copyright © 2017 Emil Kreutzman. All rights reserved.
+//  Created by Xie Liwei on 18/07/2018.
+//  Copyright © 2018 Xie Liwei. All rights reserved.
 //
 
 import Cocoa
