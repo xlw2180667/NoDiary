@@ -11,20 +11,27 @@ import CloudKit
 
 final class CloudKitManager {
     
-    static func appCloudDataBase() -> CKDatabase {
-        var appDb:CKDatabase!
-        let dbName =  GKConfig.CloudkitSettings.nameOfprivateDB
-        let container = CKContainer(identifier: dbName)
-        appDb = container.privateCloudDatabase
+    static func appCloudDataBase() -> CKDatabase? {
+        if let _ = FileManager.default.ubiquityIdentityToken {
+            var appDb:CKDatabase!
+            let dbName =  GKConfig.CloudkitSettings.nameOfprivateDB
+            let container = CKContainer(identifier: dbName)
+            appDb = container.privateCloudDatabase
+            
+            return appDb
+        } else {
+            print("No iCloud access, save to local")
+            return nil
+        }
 
-        return appDb
     }
     
     static func fetchDiaryForMonth(monthAndYear: String, completion: @escaping (_ records: [CKRecord]?, _ error: Error?) -> Void) {
         
         let predicate = NSPredicate(format: "diaryDayAndMonth == %@", monthAndYear)
         let query = CKQuery(recordType: "Diary", predicate: predicate)
-        appCloudDataBase().perform(query, inZoneWith: nil) { (diaries, error) in
+        guard let database = appCloudDataBase() else { return }
+        database.perform(query, inZoneWith: nil) { (diaries, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -53,10 +60,12 @@ final class CloudKitManager {
             }
         }
     }
+    
     static func checkIfDiaryExsit(date: String, completion: @escaping (_ records: [CKRecord]?, _ hasRecord: Bool) -> Void) {
         let predicate = NSPredicate(format: "diaryDate == %@", date)
         let query = CKQuery(recordType: "Diary", predicate: predicate)
-        appCloudDataBase().perform(query, inZoneWith: nil) { (diaries, error) in
+        guard let database = appCloudDataBase() else { return }
+        database.perform(query, inZoneWith: nil) { (diaries, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -71,7 +80,9 @@ final class CloudKitManager {
     }
 
     static func updateDiaryToICloud(record: CKRecord, completion: @escaping () -> Void) {
-        appCloudDataBase().save(record) { (record, error) in
+        guard let database = appCloudDataBase() else { return }
+
+        database.save(record) { (record, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -85,7 +96,8 @@ final class CloudKitManager {
         record.setObject(date as CKRecordValue, forKey: "diaryDate")
         record.setObject(month as CKRecordValue, forKey: "diaryDayAndMonth")
         record.setObject(diary as CKRecordValue, forKey: "diary")
-        appCloudDataBase().save(record) { (savedRecord, error) in
+        guard let database = appCloudDataBase() else { return }
+        database.save(record) { (savedRecord, error) in
             if let error = error {
                 debugPrint(error)
             } else {
@@ -96,7 +108,8 @@ final class CloudKitManager {
     
     static func deleteDiaryFromICould(record: CKRecord, completion: @escaping () -> Void) {
         record.setObject("true" as CKRecordValue, forKey: "isDeleted")
-        appCloudDataBase().save(record) { (record, error) in
+        guard let database = appCloudDataBase() else { return }
+        database.save(record) { (record, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {

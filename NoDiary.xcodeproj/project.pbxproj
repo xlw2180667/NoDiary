@@ -144,9 +144,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6ECA1BD520FF76890032CAF3 /* NoDiaryMac */ = {
+		6ECA1BD520FF76890032CAF3 /* NoDiary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiaryMac" */;
+			buildConfigurationList = 6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiary" */;
 			buildPhases = (
 				6ECA1BD220FF76890032CAF3 /* Sources */,
 				6ECA1BD320FF76890032CAF3 /* Frameworks */,
@@ -156,7 +156,7 @@
 			);
 			dependencies = (
 			);
-			name = NoDiaryMac;
+			name = NoDiary;
 			productName = NoDiary;
 			productReference = 6ECA1BD620FF76890032CAF3 /* NoDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6ECA1BD520FF76890032CAF3 /* NoDiaryMac */,
+				6ECA1BD520FF76890032CAF3 /* NoDiary */,
 			);
 		};
 /* End PBXProject section */
@@ -416,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiaryMac" */ = {
+		6ECA1BE620FF768A0032CAF3 /* Build configuration list for PBXNativeTarget "NoDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6ECA1BE720FF768A0032CAF3 /* Debug */,

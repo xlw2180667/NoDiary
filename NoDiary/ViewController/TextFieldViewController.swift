@@ -68,11 +68,11 @@ class TextFieldViewController: NSViewController {
         if textView.string == "" {return}
         UserDefaults.standard.removeObject(forKey: "\(date)")
         UserDefaults.standard.removeObject(forKey: "\(date)IsSet")
+        self.textView.string = ""
         CloudKitManager.checkIfDiaryExsit(date: date) { (records, hasRecord) in
             if hasRecord {
                 CloudKitManager.deleteDiaryFromICould(record: records![0], completion: {
                     DispatchQueue.main.async {
-                        self.textView.string = ""
                     }
                 })
             }
